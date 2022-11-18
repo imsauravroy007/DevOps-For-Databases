@@ -15,3 +15,11 @@ steps:
     backendAzureRmStorageAccountName: 'terraformstoragesds3434'
     backendAzureRmContainerName: 'tfstate'
     backendAzureRmKey: 'terraform.tfstate'
+
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    workingDirectory: 'SQL-Server-Creation'
+    commandOptions: '-var=$(PASSWORD)'
+    environmentServiceNameAzureRM: 'CognitiveSubscription (95e910f9-7fcb-4fb8-90a1-d81f3d52cfa9)'
