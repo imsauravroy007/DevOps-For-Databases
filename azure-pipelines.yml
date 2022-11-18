@@ -1,0 +1,17 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+  
+steps:
+- task: TerraformTaskV3@3
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    workingDirectory: 'SQL-Server-Creation'
+    backendServiceArm: 'CognitiveSubscription (95e910f9-7fcb-4fb8-90a1-d81f3d52cfa9)'
+    backendAzureRmResourceGroupName: 'POC'
+    backendAzureRmStorageAccountName: 'terraformstoragesds3434'
+    backendAzureRmContainerName: 'tfstate'
+    backendAzureRmKey: 'terraform.tfstate'
