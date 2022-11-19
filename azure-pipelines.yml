@@ -21,5 +21,5 @@ steps:
     provider: 'azurerm'
     command: 'plan'
     workingDirectory: 'SQL-Server-Creation'
-    commandOptions: '-var=password=$(PASSWORD)'
+    commandOptions: '-var=password=$(PASSWORD) -var=ip_addresss=$(IP_ADDRESS)'
     environmentServiceNameAzureRM: 'CognitiveSubscription (95e910f9-7fcb-4fb8-90a1-d81f3d52cfa9)'
