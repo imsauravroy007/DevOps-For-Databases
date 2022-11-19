@@ -9,7 +9,13 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
+    workingDirectory: '- task: TerraformTaskV3@3
+    
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
     workingDirectory: 'SQL-Server-Creation'
+    environmentServiceNameAzureRM: 'CognitiveSubscription (95e910f9-7fcb-4fb8-90a1-d81f3d52cfa9)''
     backendServiceArm: 'CognitiveSubscription (95e910f9-7fcb-4fb8-90a1-d81f3d52cfa9)'
     backendAzureRmResourceGroupName: 'POC'
     backendAzureRmStorageAccountName: 'terraformstoragesds3434'
