@@ -21,5 +21,6 @@ steps:
     provider: 'azurerm'
     command: 'plan'
     workingDirectory: 'SQL-Server-Creation'
-    
+    commandOptions: -input=false -var "PASSWORD=$(TF_VAR_password)"
+
     environmentServiceNameAzureRM: 'CognitiveSubscription (95e910f9-7fcb-4fb8-90a1-d81f3d52cfa9)'
